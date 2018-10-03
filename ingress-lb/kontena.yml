@@ -56,10 +56,11 @@ services:
     # {% if lb_certs.size > 0 %}
     certificates:
       # {% for subject in lb_certs %}
-      - subject: {{ subject }}
+      - subject: "{{ subject }}"
         name: "SSL_CERT_{{ subject }}"
         type: env
       # {% endfor %}
     # {% else %}
     certificates: []
     # {% endif %}
+
